@@ -33,12 +33,7 @@ const findBasinAround = (point) => {
     let x = point.x
     let y = point.y
 
-    var t, l, r, b;
-
-    let top = {
-        x: x,
-        y: y - 1
-    }
+    let top = {x: x, y: y - 1 }
     if (top.y >= 0 &&
         !elements.filter(e => e.x === top.x && e.y === top.y).length > 0 &&
         map[top.y][top.x] != 9) {
@@ -47,10 +42,7 @@ const findBasinAround = (point) => {
 
     }
 
-    let left = {
-        x: x - 1,
-        y: y
-    }
+    let left = {x: x - 1, y: y}
     if (left.x >= 0 && !elements.filter(e => e.x === left.x &&
         e.y === left.y).length > 0 &&
         map[left.y][left.x] != 9) {
@@ -59,10 +51,7 @@ const findBasinAround = (point) => {
 
     }
 
-    let bottom = {
-        x: x,
-        y: y + 1
-    }
+    let bottom = {x: x, y: y + 1}
     if (bottom.y < map.length && !elements.filter(e => e.x === bottom.x &&
         e.y === bottom.y).length > 0 &&
         map[bottom.y][bottom.x] != 9) {
@@ -71,10 +60,7 @@ const findBasinAround = (point) => {
 
     }
 
-    let right = {
-        x: x + 1,
-        y: y
-    }
+    let right = {x: x + 1, y: y}
     if (right.x < map[0].length &&
         !elements.filter(e => e.x === right.x && e.y === right.y).length > 0 &&
         map[right.y][right.x] != 9) {
