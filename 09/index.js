@@ -70,15 +70,12 @@ const findBasinAround = (point) => {
 
 }
 
-var i = 0;
-
 var sizes = []
 lowPoints.forEach((p) => {
     elements = [];
     elements.push(p);
     findBasinAround(p);
     sizes.push(elements.length);
-    i++;
 })
 
 sizes.sort((a, b) => a - b)
